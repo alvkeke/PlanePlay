@@ -63,9 +63,17 @@ public class Enemy {
         for (Point p: bulletPos) {
             //子弹向前移动
             p.y-=MyConstants.bulletSpeed;
+            /*
             if(p.y<0){
                 //如果子弹超出屏幕位置,则从链表中去除该子弹的位置
                 bulletPos.remove(p);
+            }*/
+        }
+        int len = bulletPos.size();
+        for(int i = 0; i<len; i++){
+            if(bulletPos.get(i).y<0){
+                bulletPos.remove(i);
+                len = bulletPos.size();
             }
         }
     }

@@ -3,8 +3,6 @@ package com.game.alv.planeplay;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -13,7 +11,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -62,7 +59,7 @@ public class GameActivity extends AppCompatActivity{
         bitmap = Bitmap.createBitmap(dm.widthPixels, dm.heightPixels, Bitmap.Config.ARGB_8888);
         canvas = new Canvas(bitmap);
         imgGameArea.setImageBitmap(bitmap);
-        //TODO:刷新一次游戏线程
+        //TODO:刷新一次游戏界面
 
         //打开游戏线程
         new Thread(new GameThread(GameActivity.this)).start();
