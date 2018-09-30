@@ -71,19 +71,23 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /home/alvis/.gradle
 	android:theme
 		ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:11:9-40
 activity#com.game.alv.planeplay.MainActivity
-ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:12:9-19:20
+ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:13:13-41
+		ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:12:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:14:13-18:29
+ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:15:17-69
+ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:15:25-66
+		ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:17:17-77
+ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:17:27-74
+		ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:16:27-74
+activity#com.game.alv.planeplay.GameActivity
+ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:19:9-59
+	android:name
+		ADDED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml:19:19-47
 uses-sdk
 INJECTED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/AndroidManifest.xml

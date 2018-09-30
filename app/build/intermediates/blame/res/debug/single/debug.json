@@ -944,10 +944,6 @@
         "source": "/home/alvis/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7b5f59a8c890e32a38f3d711623a264d/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
-        "merged": "/media/alvis/mydata/workspace/Android-studio/PlanePlay/app/build/intermediates/res/merged/debug/layout_view_gaming.xml.flat",
-        "source": "/media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/res/layout/view_gaming.xml"
-    },
-    {
         "merged": "/media/alvis/mydata/workspace/Android-studio/PlanePlay/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "/home/alvis/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7b5f59a8c890e32a38f3d711623a264d/res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
@@ -1258,6 +1254,10 @@
     {
         "merged": "/media/alvis/mydata/workspace/Android-studio/PlanePlay/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/media/alvis/mydata/workspace/Android-studio/PlanePlay/app/build/intermediates/res/merged/debug/layout_activity_game.xml.flat",
+        "source": "/media/alvis/mydata/workspace/Android-studio/PlanePlay/app/src/main/res/layout/activity_game.xml"
     },
     {
         "merged": "/media/alvis/mydata/workspace/Android-studio/PlanePlay/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_thumb_material.xml.flat",

@@ -6,9 +6,11 @@ public class GameThread implements Runnable {
 
     //保存传入的指针
     private Plane player;
+    MainActivity mainActivity;
 
-    GameThread(Plane p){
+    GameThread(MainActivity mainActivityi, Plane p){
         player = p;
+        mainActivity = mainActivityi;
     }
 
     @Override
@@ -20,7 +22,8 @@ public class GameThread implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }
 
+
+        }
     }
 }

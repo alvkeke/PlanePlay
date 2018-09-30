@@ -1,20 +1,16 @@
 package com.game.alv.planeplay;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-
 import java.util.Objects;
 
 
 //游戏主线程
 public class MainActivity extends AppCompatActivity {
-
-    //游戏线程,用来控制正在运行的线程
-    private Thread threadGame;
-    private Plane player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,25 +28,21 @@ public class MainActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new btnStartOnClick());
         btnExit.setOnClickListener(new btnExitOnClick());
 
-
-
     }
 
 
-    //启动界面响应事件
+    //开始游戏按钮点击事件响应
     class btnStartOnClick implements View.OnClickListener{
 
         @Override
         public void onClick(View v) {
-            //加载游戏视图
-            MainActivity.this.setContentView(R.layout.view_gaming);
-            //启动游戏线程
-            player = new Plane();
-            threadGame = new Thread(new GameThread(player));
-            threadGame.start();
+            //启动游戏界面
+            Intent intentGame = new Intent(MainActivity.this, GameActivity.class);
+            startActivity(intentGame);
         }
     }
 
+    //退出游戏按钮点击事件相应
     class btnExitOnClick implements View.OnClickListener{
 
         @Override
@@ -58,7 +50,5 @@ public class MainActivity extends AppCompatActivity {
             MainActivity.this.finish();
         }
     }
-
-    //游戏界面事件相应
 
 }

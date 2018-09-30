@@ -16,6 +16,7 @@ public class Plane {
     private int shootBreakTime;
     private long lastShootTime;
 
+
     Plane(){
         //设置初始血量
         hp = 100;
@@ -23,6 +24,8 @@ public class Plane {
         speed = 10.0f;
         //设置位置
         position = new Point(0, 0);
+        //初始化子弹数列
+        bulletPos = new ArrayList<>();
         //设置射击时间间隔
         shootBreakTime = 500;
         //获取当前时间
@@ -37,9 +40,14 @@ public class Plane {
         return position;
     }
 
-    public void MoveTo(int x, int y){
+    public void MoveTo(float x, float y){
         //TODO:根据向量的方法移动玩家的飞机
-
+        //储存向量长度
+        double vl = Math.sqrt(Math.pow(x-position.x, 2) + Math.pow(y-position.y, 2));
+        //获取x方向移动量,移动
+        position.x+=((x-position.x)/vl)*speed;
+        //获取y方向移动量,移动
+        position.y+=((y-position.y)/vl)*speed;
     }
 
     public boolean wasHit(int hpDec){

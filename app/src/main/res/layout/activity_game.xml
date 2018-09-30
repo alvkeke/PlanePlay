@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/game_img_background"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:contentDescription="@string/game_bgImg_description" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,6 +15,7 @@
 
         <TextView
             android:id="@+id/game_txtTop"
+            android:text="test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true" />
@@ -24,7 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_below="@id/game_txtTop" />
+            android:layout_below="@id/game_txtTop"
+            android:contentDescription="@string/gaming_touch_area" />
 
     </RelativeLayout>
 

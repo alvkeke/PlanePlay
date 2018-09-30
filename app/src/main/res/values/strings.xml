@@ -3,4 +3,7 @@
     <string name="main_btn_exit">Exit</string>
     <string name="main_btn_start">Start</string>
     <string name="main_edt_yourName">YourName</string>
+    <string name="game_bgImg_description">Gaming Background Image</string>
+    <string name="gaming_touch_area">Gaming Touch Area</string>
+    <string name="login_view_background_image">Login View Background Image</string>
 </resources>
