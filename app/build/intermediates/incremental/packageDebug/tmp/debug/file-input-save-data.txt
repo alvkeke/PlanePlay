@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sun Sep 30 15:07:45 CST 2018
+0.baseType=DIRECTORY
+0.base=/media/alvis/mydata/workspace/Android-studio/PlanePlay/app/build/intermediates/transforms/dexMerger/debug/0
+0.path=classes.dex
+0.set=DEX
+count=1
