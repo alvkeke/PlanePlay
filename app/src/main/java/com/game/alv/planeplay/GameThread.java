@@ -57,6 +57,7 @@ public class GameThread implements Runnable {
 
             //子弹移动
             gameActivity.player.bulletMove();
+            //TODO: 修复BUG:已经判断击中敌人,且致死,但是将敌人从队列中移除时失效
             //判断子弹是否击中敌人
             ArrayList<Point> bullets = gameActivity.player.getBulletPos();
             ArrayList<Enemy> enemies = gameActivity.enemies;
