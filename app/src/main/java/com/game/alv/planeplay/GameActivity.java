@@ -14,13 +14,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Objects;
-import java.util.Random;
-import java.util.TooManyListenersException;
 
 public class GameActivity extends AppCompatActivity{
 
@@ -86,7 +81,7 @@ public class GameActivity extends AppCompatActivity{
         enemies = new ArrayList<>();
 
         //TODO:刷新一次游戏界面
-
+        flashView();
         //打开游戏线程
         new Thread(new GameThread(GameActivity.this)).start();
 
@@ -144,10 +139,8 @@ public class GameActivity extends AppCompatActivity{
 
         //显示敌人
         for(int i = 0; i<enemies.size(); i++){
-
             canvas.drawCircle(enemies.get(i).getPosition().x, enemies.get(i).getPosition().y,
                     MyConstants.PlaneR, paintEnemy);
-            System.out.println(enemies.size());
         }
 
         //显示玩家子弹
@@ -156,7 +149,11 @@ public class GameActivity extends AppCompatActivity{
             canvas.drawCircle(p.get(i).x, p.get(i).y,
                     MyConstants.BulletR, paintBullet);
         }
-        //显示敌人子弹
+        //TODO:显示敌人子弹
+
+        //更新状态栏
+        CharSequence strStatus = "HP:" + player.getHp() + "  Score:" + player.getScore();
+        txtStatus.setText(strStatus);
 
     }
 

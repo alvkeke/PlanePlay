@@ -50,6 +50,12 @@ public class GameThread implements Runnable {
             gameActivity.player.Shoot();
             //敌人移动
             for(int i = 0; i<gameActivity.enemies.size(); i++){
+                //随机撞击伤害
+                if(gameActivity.player.wasHit(gameActivity.enemies.get(i).getPosition(), randomX.nextInt(10) + 5)){
+                    gameActivity.enemies.remove(i);
+                    continue;
+                }
+
                 if(gameActivity.enemies.get(i).Move(gameActivity.dm.heightPixels)){
                     gameActivity.enemies.remove(i);
                 }
@@ -57,18 +63,18 @@ public class GameThread implements Runnable {
 
             //子弹移动
             gameActivity.player.bulletMove();
-            //TODO: 修复BUG:已经判断击中敌人,且致死,但是将敌人从队列中移除时失效
-            //判断子弹是否击中敌人
+            //判断击中敌人,且致死,将敌人从队列中移除
             ArrayList<Point> bullets = gameActivity.player.getBulletPos();
             ArrayList<Enemy> enemies = gameActivity.enemies;
             if(bullets.size() > 0 && enemies.size() >0) {
-                for (int i = 0; i < bullets.size(); i++) {
-                    for (int j = 0; j < enemies.size(); j++) {
-                        if (enemies.get(j).wasHit(bullets.get(i), 1)) {
-                            gameActivity.player.getBulletPos().get(i).set(0, -10);
-                            gameActivity.enemies.remove(j);
-                            i--;
-                            j--;
+                for(int i = 0; i< enemies.size(); i++){
+                    for(int j = 0; j<bullets.size(); j++){
+                        //随机伤害值:80-100
+                        if(enemies.get(i).wasHit(bullets.get(j), randomX.nextInt(21) + 80)){
+                            enemies.remove(i);
+                            bullets.remove(j);
+                            gameActivity.player.addScore();
+                            break;
                         }
                     }
                 }
