@@ -21,8 +21,4 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/game_bgImg_description" />
 
-
-
-
-
 </android.support.constraint.ConstraintLayout>

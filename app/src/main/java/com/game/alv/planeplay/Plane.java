@@ -29,7 +29,7 @@ public class Plane {
         lastShootTime = new Date().getTime();
     }
 
-    public int getHp() {
+    int getHp() {
         return hp;
     }
 
@@ -37,10 +37,10 @@ public class Plane {
         return position;
     }
 
-    public void Move(float x, float y){
+    void MoveTo(float x, float y){
         //根据传入的数据,移动
-        position.x+=x;
-        position.y+=y;
+        position.x = (int)x;
+        position.y = (int)y;
     }
 
     public boolean wasHit(int hpDec){
@@ -50,7 +50,7 @@ public class Plane {
         return hp <= 0;
     }
 
-    public void Shoot(){
+    void Shoot(){
         //判断间隔是否够大
         if(new Date().getTime() - lastShootTime > shootBreakTime) {
             //发射子弹
@@ -60,7 +60,7 @@ public class Plane {
         }
     }
 
-    public void bulletMove(){
+    void bulletMove(){
         for (Point p: bulletPos) {
             //子弹向前移动
             p.y-=MyConstants.bulletSpeed;
@@ -68,18 +68,16 @@ public class Plane {
         }
     }
 
-    public void releaseBullet(){
-        int len = bulletPos.size();
-        for(int i = 0; i<len; i++){
+    void releaseBullet(){
+        for(int i = 0; i<bulletPos.size(); i++){
             if(bulletPos.get(i).y<0){
                 bulletPos.remove(i);
-                len = bulletPos.size();
             }
         }
     }
 
     //返回当前的子弹位置,让主线程刷新子弹位置
-    public ArrayList<Point> getBulletPos() {
+    ArrayList<Point> getBulletPos() {
         return bulletPos;
     }
 }
